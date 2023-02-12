@@ -1,0 +1,50 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.main-btn {
+        height: 40px;
+        width: auto;
+        padding-left: 50px;
+        padding-right: 50px;
+        border: 1px solid #FFFFFF;
+        color: $white;
+        @include adaptive-font(20, 14);
+        cursor: pointer;
+        background: transparent;
+        transition: .3s ease-in-out;
+        &:hover {
+            background: $white;
+            color: $main-black;
+        }
+        &.inversion {
+            color: $main-black;
+            border: 1px solid $main-black;
+
+            &:hover {
+                background: $main-black;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .btn {
+        &.main-btn {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .btn {
+        &.main-btn {
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 20px;
+            white-space: nowrap;
+        }
+    }
+}
