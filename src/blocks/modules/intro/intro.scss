@@ -168,11 +168,11 @@
             &-item {
                 width: 48%;
                 display: flex;
-                align-items: center;
+                align-items: start;
                 flex-direction: column;
                 min-width: 170px;
                 margin-right: 0;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
                 &:last-child {
                     margin-right: 0;
                 }
@@ -200,8 +200,8 @@
 @media (max-width: 380px) {
     .intro {
         height: auto;
-        padding-top: 70px;
-        padding-bottom: 70px;
+        padding-top: 10px;
+        padding-bottom: 30px;
         &__icons {
             display: flex;
             align-items: start;
@@ -217,7 +217,7 @@
                 flex-direction: column;
                 min-width: 170px;
                 margin-right: 0;
-                margin-bottom: 20px;
+                margin-bottom: 30px;
                 &:last-child {
                     margin-right: 0;
                 }
@@ -228,9 +228,6 @@
                     text-align: center;
                 }
             }
-            .btn {
-                margin-top: 35px;
-            }
         }
         .mobile {
             display: block;
@@ -239,7 +236,15 @@
             display: none;
         }
         .btn {
-            width: 280px;
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .intro {
+        .btn {
+            width: 210px;
         }
     }
 }
