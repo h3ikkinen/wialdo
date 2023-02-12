@@ -7,12 +7,17 @@ $(document).on('click', '.js-burger-trigger', function() {
     $('.js-burger').toggleClass('js-active');
     const scroll = $(window).scrollTop();
     if ($(this).hasClass('js-active')) {
+        $('body').css('overflow', 'hidden')
         header.addClass('header_white');
         $('.js-feedback-btn').addClass('inversion')
+
+        return false
     } else if (scroll < 1) {
         header.removeClass("header_white");
         $('.js-feedback-btn').removeClass('inversion')
     }
+
+    $('body').css('overflow', '')
 })
 
 $(window).scroll(function() {

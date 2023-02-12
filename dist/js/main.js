@@ -29,12 +29,15 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.js-burger-
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-burger').toggleClass('js-active');
   var scroll = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
   if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass('js-active')) {
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').css('overflow', 'hidden');
     header.addClass('header_white');
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-feedback-btn').addClass('inversion');
+    return false;
   } else if (scroll < 1) {
     header.removeClass("header_white");
     jquery__WEBPACK_IMPORTED_MODULE_0___default()('.js-feedback-btn').removeClass('inversion');
   }
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('body').css('overflow', '');
 });
 jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scroll(function () {
   var scroll = jquery__WEBPACK_IMPORTED_MODULE_0___default()(window).scrollTop();
